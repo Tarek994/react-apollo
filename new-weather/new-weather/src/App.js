@@ -5,7 +5,7 @@ import './App.css';
 function App() {
 
   const apiKey = "6b42ac7df85a4e3c6a182a15d6784e03"
-  const {weatherData, setWeatherData} = useState([{}])
+  const {weatherData , setWeatherData} = useState([{}])
   const [city, setCity ] = useState("") 
 
   const getWeather = (event) => {
@@ -14,7 +14,7 @@ function App() {
         response => response.json()
       ).then(
         data => {
-          setWeatherData(data);
+          setWeatherData(data)
           setCity("")
         }
       )
