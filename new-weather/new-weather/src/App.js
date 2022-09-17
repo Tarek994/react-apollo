@@ -5,8 +5,8 @@ import './App.css';
 function App() {
 
   const apiKey = "6b42ac7df85a4e3c6a182a15d6784e03"
-  const {weatherData , setWeatherData} = useState([{}])
-  const [city, setCity ] = useState("") 
+  const {weatherData , setWeatherData} = useState([{}]);
+  const [city, setCity ] = useState("")
 
   const getWeather = (event) => {
     if(event.key === "Enter"){
@@ -14,7 +14,7 @@ function App() {
         response => response.json()
       ).then(
         data => {
-          setWeatherData(data)
+          setWeatherData(data);
           setCity("")
         }
       )
@@ -31,6 +31,18 @@ function App() {
       onKeyPress={getWeather}
       />
 
+{typeof weatherData?.main && 'undefined' ? (
+        <div>
+          <p>Welcome to weather app! Enter in a city to get the weather</p>
+        </div>
+      ) : (
+        <div>
+          <p>{weatherData.name}</p>
+          <p>{Math.round(weatherData.temp)}˚F</p>
+          <p>{weatherData.weather[0].main}</p>
+
+        </div>
+      )}
 
       
     </div>
