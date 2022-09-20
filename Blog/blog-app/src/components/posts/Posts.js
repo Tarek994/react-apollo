@@ -7,7 +7,8 @@ const Posts = () => {
       <Post />
       <Post />
       <Post />
-      <Post />
+
+      
       
       </section>
   )
