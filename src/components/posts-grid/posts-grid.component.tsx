@@ -1,6 +1,9 @@
 import { Post } from "../../common/interfaces/post.interfaces"
 
-const PostGrid: React.FC<{posts: Post}> = () => {
+interface PostsGridProps {
+    posts: Post[]
+}
+
     return (
         <div>Post Grid</div>
     )
