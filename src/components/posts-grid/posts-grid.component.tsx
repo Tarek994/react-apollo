@@ -4,6 +4,7 @@ interface PostsGridProps {
     posts: Post[]
 }
 
+const PostGrid: React.FC<PostsGridProps> = ({ posts }: PostsGridProps) => {
     return (
         <div>Post Grid</div>
     )
