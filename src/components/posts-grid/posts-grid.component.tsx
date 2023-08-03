@@ -1,4 +1,5 @@
 import { Post } from "../../common/interfaces/post.interfaces"
+import PostGridItem from "./posts-grid-item/posts-grid-item.component"
 
 interface PostsGridProps {
     posts: Post[]
@@ -6,7 +7,13 @@ interface PostsGridProps {
 
 const PostGrid: React.FC<PostsGridProps> = ({ posts }: PostsGridProps) => {
     return (
-        <div>Post Grid</div>
+        <div className="posts-grid">
+            { posts.map(post =>(
+                <div key="post.id">
+                <PostGridItem/>
+                </div>
+            )) }
+        </div>
     )
 }
 export default PostGrid
