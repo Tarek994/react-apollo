@@ -11,6 +11,10 @@ const Home: React.FC = () => {
         }
     ]
 
+    return (
+        <div className="home">
+            <PostGrid posts={posts} />
+        </div>
     )
 }
 
