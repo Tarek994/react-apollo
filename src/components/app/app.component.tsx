@@ -5,9 +5,12 @@ import '../../common/styles'
 import './app.component.css'
 import About from '../../pages/about/about.page'
 import Home from '../../pages/home/home.page'
+import { ApolloProvider } from '@apollo/client'
+import client from '../../common/apollo-client'
 
 const App: React.FC = () => {
     return (
+        <ApolloProvider client={client}>
         <Router>
             <Header />
             <Routes>
@@ -23,6 +26,7 @@ const App: React.FC = () => {
                 </Route>
             </Routes>
         </Router>
+        </ApolloProvider>
     )
 }
 export default App
