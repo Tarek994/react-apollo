@@ -3,14 +3,7 @@ import { useGetPosts } from "../../hooks/posts/useGetPosts"
 
 
 const Home: React.FC = () => {
-    const posts: Post[] = [
-        {
-            id: '1',
-            title: "Post one",
-            body: "Body of my post"
-        }
-    ]
-
+    const posts = useGetPosts();
     return (
         <div className="home">
             <PostGrid posts={posts} />
