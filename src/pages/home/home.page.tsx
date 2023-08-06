@@ -1,5 +1,5 @@
-import { Post } from "../../common/interfaces/post.interfaces"
 import PostGrid from "../../components/posts-grid/posts-grid.component"
+import { useGetPosts } from "../../hooks/posts/useGetPosts"
 
 
 const Home: React.FC = () => {
