@@ -6,7 +6,7 @@ const Home: React.FC = () => {
     const posts = useGetPosts();
     return (
         <div className="home">
-            <PostGrid posts={posts} />
+            <PostGrid posts={posts || []} />
         </div>
     )
 }
