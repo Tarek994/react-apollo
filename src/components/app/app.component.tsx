@@ -11,21 +11,21 @@ import client from '../../common/apollo-client'
 const App: React.FC = () => {
     return (
         <ApolloProvider client={client}>
-        <Router>
-            <Header />
-            <Routes>
-                <Route
-                    path='/'
-                    element={<Home />}
-                >
-                </Route>
-                <Route
-                    path='/about'
-                    element={<About />}
-                >
-                </Route>
-            </Routes>
-        </Router>
+            <Router>
+                <Header />
+                <Routes>
+                    <Route
+                        path='/'
+                        element={<Home />}
+                    >
+                    </Route>
+                    <Route
+                        path='/about'
+                        element={<About />}
+                    >
+                    </Route>
+                </Routes>
+            </Router>
         </ApolloProvider>
     )
 }
