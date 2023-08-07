@@ -1,4 +1,4 @@
-import { Post } from "../../common/interfaces/post.interfaces"
+import { Post } from "../../../common/interfaces/post.interfaces"
 import PostGridItem from "./posts-grid-item/posts-grid-item.component"
 
 interface PostsGridProps {

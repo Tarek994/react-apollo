@@ -1,4 +1,4 @@
-import { Post } from "../../../common/interfaces/post.interfaces"
+import { Post } from "../../../../common/interfaces/post.interfaces"
 
 const PostGridItem: React.FC<{ post: Post }> = ({ post: Post }) => {
     return (

@@ -1,4 +1,4 @@
-import PostGrid from "../../components/posts-grid/posts-grid.component"
+import PostGrid from "../../components/posts/posts-grid/posts-grid.component"
 import { useGetPosts } from "../../hooks/posts/useGetPosts"
 
 
