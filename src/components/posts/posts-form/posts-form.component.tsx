@@ -10,6 +10,8 @@ interface FormData {
 
 const PostsForm: React.FC = () => {
     const { register, handleSubmit } = useForm<FormData>();
+    const [searchParams] = useSearchParams();
+    const criteria = searchParams.get('criteria') || '';
 
 
     return (
