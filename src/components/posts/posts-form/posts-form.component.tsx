@@ -19,9 +19,9 @@ const PostsForm: React.FC = () => {
 
     return (
         <div className="posts-form">
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <input type="text" name="title" ref={register} />
-
+                <input type="text"  {...register('search')} defaultValue={criteria} />
+                <textarea {...register('search')} defaultValue={criteria} />
+                <input type="submit" />
             </form>
 
         </div>
