@@ -12,6 +12,9 @@ const PostsForm: React.FC = () => {
     const { register, handleSubmit } = useForm<FormData>();
     const [searchParams] = useSearchParams();
     const criteria = searchParams.get('criteria') || '';
+    const onSubmit = handleSubmit(({ title, body }) => {
+        console.log(title, body);
+    });
 
 
     return (
