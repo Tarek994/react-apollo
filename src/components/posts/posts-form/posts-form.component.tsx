@@ -1,4 +1,9 @@
 import { useForm } from "react-hook-form"
+interface FormData {
+    title: string;
+    body: string;
+    search: string
+}
 
 
 const PostsForm: React.FC = () => {
