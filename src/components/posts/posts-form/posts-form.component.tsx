@@ -1,4 +1,6 @@
 import { useForm } from "react-hook-form"
+import { useSearchParams } from 'react-router-dom';
+
 interface FormData {
     title: string;
     body: string;
