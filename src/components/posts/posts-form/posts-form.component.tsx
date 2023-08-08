@@ -9,11 +9,7 @@ interface FormData {
 
 
 const PostsForm: React.FC = () => {
-    const { register, handleSubmit } = useForm();
-
-    const onSubmit = data => {
-
-    }
+    const { register, handleSubmit } = useForm<FormData>();
 
 
     return (
