@@ -19,6 +19,7 @@ const PostsForm: React.FC = () => {
 
     return (
         <div className="posts-form">
+            <form onSubmit={onSubmit}>
                 <input type="text"  {...register('search')} defaultValue={criteria} />
                 <textarea {...register('search')} defaultValue={criteria} />
                 <input type="submit" />
