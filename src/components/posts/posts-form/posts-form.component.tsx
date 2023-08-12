@@ -10,10 +10,10 @@ interface FormData {
 const PostsForm: React.FC = () => {
     const { register, handleSubmit } = useForm<FormData>();
     const createPost = useCreatePost();
-    
+
     const onSubmit = handleSubmit(({ title, body }) => {
         createPost({ variables: { input: { title, body } } });
-        console.log(title,body)
+        console.log(title, body)
     });
 
     return (
