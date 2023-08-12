@@ -1,48 +1,46 @@
 import { gql, useMutation } from "@apollo/client";
 
-
 interface CreatePostInput {
-    variables: {
-        input: {
-            title: string,
-            body: string
-        },
-    }
+  variables: {
+    input: {
+      title: string;
+      body: string;
+    };
+  };
 }
 
 const CREATE_POST = gql`
-    mutation CreatePost($input: CreatePostInput!) {
-        createPost(input:$input){
-            id
-            title
-            body
-        }
+  mutation CreatePost($input: CreatePostInput!) {
+    createPost(input: $input) {
+      id
+      title
+      body
     }
-
-`
+  }
+`;
 export const useCreatePost = (): ((
-    createPostInput: CreatePostInput,
+  createPostInput: CreatePostInput
 ) => any) => {
-    const [createPost] = useMutation(CREATE_POST, {
-        update(cache, { data: { createPost } }) {
-            cache.modify({
-                fields: {
-                    posts(existingPosts = []) {
-                        const newPostRef = cache.writeFragment({
-                            data: createPost,
-                            fragment: gql`
-                            fragment NewPost on Post {
-                                id,
-                                title,
-                                body
-                            }
-                            `
-                        });
-                        return [...existingPosts, newPostRef]
-                    }
+  const [createPost] = useMutation(CREATE_POST, {
+    update(cache, { data: { createPost } }) {
+      cache.modify({
+        fields: {
+          posts(existingPosts = []) {
+            const newPostRef = cache.writeFragment({
+              data: createPost,
+              fragment: gql`
+                fragment NewPost on Post {
+                  id
+                  title
+                  body
                 }
-            })
-        }
-    });
-    return createPost
-}
+              `,
+            });
+            return [...existingPosts, newPostRef];
+          },
+        },
+      });
+    },
+  });
+  return createPost;
+};
