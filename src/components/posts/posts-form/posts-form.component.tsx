@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form"
 import { useSearchParams } from 'react-router-dom';
+import { useCreatePost } from "../../../hooks/posts/useCreatePost";
 
 interface FormData {
     title: string;
@@ -10,8 +11,8 @@ interface FormData {
 
 const PostsForm: React.FC = () => {
     const { register, handleSubmit } = useForm<FormData>();
-    const [searchParams] = useSearchParams();
-    const criteria = searchParams.get('criteria') || '';
+    const createPost = useCreatePost();
+
     const onSubmit = handleSubmit(({ title, body }) => {
         console.log(title, body);
     });
