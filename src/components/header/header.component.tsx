@@ -5,17 +5,7 @@ import './header.component.css';
 
 const Header: React.FC = () =>{
     return (
-        <header>
-            <nav>
-                <ul>
-                    <li>
-                        <NavLink to="/">Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/about">About Us</NavLink>
-                    </li>
-                </ul>
-            </nav>
+        <header className="header">
         </header>
     )
 }
