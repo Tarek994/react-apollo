@@ -10,6 +10,17 @@ const Header: React.FC = () =>{
                 <div className="logo">
                     <h4>LOGO</h4>
                 </div>
+                <nav className="navbar">
+                    <ul>
+                        <li>
+                            <NavLink to="/">Home</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/about">About Us</NavLink>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
     )
 }
