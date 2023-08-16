@@ -14,3 +14,7 @@
     display: flex !important;
 }
 
+.navbar ul li {
+    margin-right: 1rem;
+    list-style: none;
+}
