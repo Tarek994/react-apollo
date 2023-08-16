@@ -6,6 +6,7 @@ import './header.component.css';
 const Header: React.FC = () =>{
     return (
         <header className="header">
+            <div className="main-nav">
         </header>
     )
 }
