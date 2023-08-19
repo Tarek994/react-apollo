@@ -1,6 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useCreatePost } from '../../../hooks/posts/useCreatePost';
+import "./posts-form.css";
+
 
 interface FormData {
     title: string;
@@ -18,10 +20,10 @@ const PostsForm: React.FC = () => {
 
     return (
         <div className="posts-form">
-            <form onSubmit={onSubmit}>
+            <form className='form' onSubmit={onSubmit}>
                 <input type="text" {...register('title')} placeholder="Title" />
                 <textarea {...register('body')} placeholder="Body"></textarea>
-                <input type="submit" value="Create Post" />
+                <input className='btn-posts' type="submit" value="Create Post" />
             </form>
         </div>
     );
