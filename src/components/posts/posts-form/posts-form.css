@@ -1,0 +1,10 @@
+.posts-form{
+    background-color: #e4f4fa;
+    display: flex;
+    flex-direction: column;
+    text-align: center ;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-radius: 15px;
+}
+
