@@ -7,7 +7,7 @@ const Home: React.FC = () => {
     const posts = useGetPosts();
     return (
         <div className="home">
-            <div>
+            <div className="img-div">
                 <img src={home} alt="" />
             </div>
             <PostGrid posts={posts || []} />
