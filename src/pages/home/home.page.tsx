@@ -10,7 +10,9 @@ const Home: React.FC = () => {
             <div className="img-div">
                 <img src={home} alt="" />
             </div>
-            <PostGrid posts={posts || []} />
+            <div className="text">
+                <PostGrid posts={posts || []} />
+            </div>
         </div>
     )
 }
