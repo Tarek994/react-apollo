@@ -12,3 +12,8 @@
     text-align: center;
     margin: 0
 }
+
+.img-div img {
+    max-width: 70%;
+    height: auto;
+}
