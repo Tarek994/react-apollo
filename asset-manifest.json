@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-apollo/static/css/main.b507d79b.css",
+    "main.js": "/react-apollo/static/js/main.fddc050c.js",
+    "static/js/787.39e6d466.chunk.js": "/react-apollo/static/js/787.39e6d466.chunk.js",
+    "static/media/home.svg": "/react-apollo/static/media/home.76728969c5f867549b0aed4a184dadc1.svg",
+    "index.html": "/react-apollo/index.html",
+    "main.b507d79b.css.map": "/react-apollo/static/css/main.b507d79b.css.map",
+    "main.fddc050c.js.map": "/react-apollo/static/js/main.fddc050c.js.map",
+    "787.39e6d466.chunk.js.map": "/react-apollo/static/js/787.39e6d466.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b507d79b.css",
+    "static/js/main.fddc050c.js"
+  ]
+}
